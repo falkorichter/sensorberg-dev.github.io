@@ -5,7 +5,8 @@ permalink: /android/
 additionalNavigation : [
     { "title" : "Source Code",              "link" : "https://github.com/sensorberg-dev/android-sdk" },
     { "title" : "Android SDK Samples",      "link" : "https://github.com/sensorberg-dev/android-sdk-samples" },
-    { "title" : "Android SDK Bugtracker",   "link" : "https://github.com/sensorberg-dev/android-sdk/issues" }
+    { "title" : "Android SDK Bugtracker",   "link" : "https://github.com/sensorberg-dev/android-sdk/issues" },
+    { "title" : "faulty link",              "link" : "https://not-exists.com" }
 ]
 ---
 

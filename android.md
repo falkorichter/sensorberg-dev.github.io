@@ -23,7 +23,7 @@ This applies to every dependency change from <b>non-RAILS</b> version to <b>-RAI
 <p>For more useful knowledge articles, please visit our&nbsp;<a href="https://support.sensorberg.com/hc/en-us/categories/115000135909-Sensorberg-IoT-Enterprise-Platform" target="_blank">Knowledge Center.</a></p>
 <p>The latest current artifact is:</p>
 {% highlight groovy %}
-compile 'com.sensorberg.sdk:android-sdk:2.3.2-RAILS'
+compile 'com.sensorberg.sdk:{{ site.latestAndroidSDKRelease }}'
 {% endhighlight %}
 </div>
 

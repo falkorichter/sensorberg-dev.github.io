@@ -25,7 +25,7 @@ permalink: /:year/:month/:title/
 paginate: 3
 
 latestiOSRelease : "2.5"
-latestAndroidSDKRelease : "2.2.0"
+latestAndroidSDKRelease : "2.3.3-RAILS"
 
 excerpt_separator: <!--more-->
 highlighter: rouge

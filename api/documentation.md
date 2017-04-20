@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Bankathon 2015
+title: API Documentation
 permalink: /api/index.html
 comments: true
 
 ---
 
-#Notes:
+# Notes:
 We are using JSONAPI
 
-#endpoints
+# endpoints
 
 currently we offer these endpoints:
 
@@ -31,16 +31,16 @@ Note: in the URLs, dashes are used. `event_reaction_log_entries`becomes [portal.
 
 
 
-#PostMan 
+# PostMan 
 
-##collection
+## collection
 Available for download at [SensorbergAPI.postman_collection](SensorbergAPI.postman_collection)
 
-##variables:
+## variables:
 * `api_base_url` must be set to `https://portal.sensorberg.com`
 * `auth_token´ must be set to your auth token available at [https://portal.sensorberg.com/manager/user_auth_tokens/1](portal.sensorberg.com/manager/user_auth_tokens/1)
 
-#filtering
+# filtering
 http://jsonapi.org/format/#fetching-filtering
 http://jsonapi-resources.com/v0.9/guide/resources.html#Filters
 
@@ -54,7 +54,7 @@ curl -X GET \
   -H 'content-type: application/vnd.api+json' \
 ```
 
-#pagination
+# pagination
 http://jsonapi-resources.com/v0.9/guide/resources.html#Pagination
 
 

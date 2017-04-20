@@ -27,14 +27,19 @@ currently we offer these endpoints:
     end
 end
 ```
+
 Note: in the URLs, dashes are used. `event_reaction_log_entries`becomes [portal.sensorberg.com/api/internal/event-reaction-log-entries](https://portal.sensorberg.com/api/internal/event-reaction-log-entries)
 
+#known issues
 
+In order to fully create a "campaign" the endpoints for `event_reactions` and `interaction_periods`... are currently missing. They will be added shortly.
 
 # PostMan 
 
 ## collection
 Available for download at [SensorbergAPI.postman_collection](SensorbergAPI.postman_collection)
+
+go to `Settings->Retain headers when clicking links->On` to enable a useful workflow in postman by following links contained in the response.
 
 ## variables:
 * `api_base_url` must be set to `https://portal.sensorberg.com`

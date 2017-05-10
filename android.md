@@ -28,7 +28,9 @@ compile 'com.sensorberg.sdk:{{ site.latestAndroidSDKRelease }}'
 
 If you are using version 2.2.0 still, you are still <strong>required to change the base URL</strong> in your Application.java
 {% highlight java %}
-RetrofitApiTransport.RESOLVER_BASE_URL = "https://portal.sensorberg-cdn.com";
+static {
+	RetrofitApiTransport.RESOLVER_BASE_URL = "https://portal.sensorberg-cdn.com";
+}
 {% endhighlight %}
 </div>
 

@@ -26,11 +26,11 @@ This applies to every dependency change from <b>non-RAILS</b> version to <b>-RAI
 compile 'com.sensorberg.sdk:{{ site.latestAndroidSDKRelease }}'
 {% endhighlight %}
 
-If you are using version 2.2.0 still, you are still <strong>required to change the base URL</strong> in your Application.java
+If you are using version 2.2.0 still, you are still <strong>required to change the base URL</strong> in your Application class in a static initializer:
 {% highlight java %}
-static {
-	RetrofitApiTransport.RESOLVER_BASE_URL = "https://portal.sensorberg-cdn.com";
-}
+static {		
+   com.sensorberg.sdk.internal.transport.RetrofitApiTransport.RESOLVER_BASE_URL = "https://portal.sensorberg-cdn.com";	
+} 
 {% endhighlight %}
 </div>
 

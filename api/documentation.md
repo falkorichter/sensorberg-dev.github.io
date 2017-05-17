@@ -43,7 +43,7 @@ go to `Settings->Retain headers when clicking links->On` to enable a useful work
 
 ## variables:
 * `api_base_url` must be set to `https://portal.sensorberg.com`
-* `auth_token´ must be set to your auth token available at [https://portal.sensorberg.com/manager/user_auth_tokens/1](portal.sensorberg.com/manager/user_auth_tokens/1)
+* `auth_token´ must be set to your auth token available at [https://portal.sensorberg.com/manager/user_auth_tokens/1](https://portal.sensorberg.com/manager/user_auth_tokens/1)
 
 # filtering
 http://jsonapi.org/format/#fetching-filtering

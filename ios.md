@@ -10,6 +10,37 @@ additionalNavigation : [
 
 ---  
 
+<div class="callout callout-alert">
+<h1><i class="fa fa-exclamation-triangle"></i>Note about SDK versions</h1>
+</div>
+
+Starting with v2.5, the Sensorberg SDK uses a different API end-point.  
+If you're using v2.4.1 of our SDK, you will need to manually inform the SDK the address of the new end-point:  
+
+**Objective-C**  
+```
+PUBLISH(({  
+SBEventUpdateResolver *updateEvent = [SBEventUpdateResolver new];  
+updateEvent.baseURL = @"https://portal.sensorberg-cdn.com";  
+updateEvent.interactionsPath    = @"/api/v2/sdk/gateways/{apiKey}/interactions.json";  
+updateEvent.analyticsPath       = @"/api/v2/sdk/gateways/{apiKey}/analytics.json";  
+updateEvent.settingsPath        = @"/api/v2/sdk/gateways/{apiKey}/settings.json?platform=ios";  
+updateEvent.pingPath            = @"/api/v2/sdk/gateways/{apiKey}/active.json";  
+updateEvent;  
+}));   
+```  
+**Swift**  
+```
+let eventUpdateResolver = SBEventUpdateResolver()
+eventUpdateResolver.baseURL = "https://portal.sensorberg-cdn.com"
+eventUpdateResolver.interactionsPath = "/api/v2/sdk/gateways/{apiKey}/interactions.json"
+eventUpdateResolver.analyticsPath = "/api/v2/sdk/gateways/{apiKey}/analytics.json"
+eventUpdateResolver.settingsPath = "/api/v2/sdk/gateways/{apiKey}/settings.json?platform=ios"
+eventUpdateResolver.pingPath = "/api/v2/sdk/gateways/{apiKey}/active.json"
+Tolo.sharedInstance().publish(eventUpdateResolver)
+```
+
+
 # Getting started with the Sensorberg SDK
 
 *This is a guide to help developers get up to speed with Sensorberg iOS SDK. These step-by-step instructions are written for Xcode 7, using the iOS 8 SDK. If you are using a previous version of Xcode, you may want to update before starting.*  
@@ -229,37 +260,6 @@ or
         super.viewDidLoad()
         Tolo.sharedInstance().subscribe(self)
     } 
-
-
-<div class="callout callout-alert">
-<h1><i class="fa fa-exclamation-triangle"></i>Note about SDK versions</h1>
-</div>
-
-Starting with v2.5, the Sensorberg SDK uses a different API end-point.  
-If you're using v2.4.1 of our SDK, you will need to manually inform the SDK the address of the new end-point:  
-
-**Objective-C**  
-```
-PUBLISH(({  
-SBEventUpdateResolver *updateEvent = [SBEventUpdateResolver new];  
-updateEvent.baseURL = @"https://portal.sensorberg-cdn.com";  
-updateEvent.interactionsPath    = @"/api/v2/sdk/gateways/{apiKey}/interactions.json";  
-updateEvent.analyticsPath       = @"/api/v2/sdk/gateways/{apiKey}/analytics.json";  
-updateEvent.settingsPath        = @"/api/v2/sdk/gateways/{apiKey}/settings.json?platform=ios";  
-updateEvent.pingPath            = @"/api/v2/sdk/gateways/{apiKey}/active.json";  
-updateEvent;  
-}));   
-```  
-**Swift**  
-```
-let eventUpdateResolver = SBEventUpdateResolver()
-eventUpdateResolver.baseURL = "https://portal.sensorberg-cdn.com"
-eventUpdateResolver.interactionsPath = "/api/v2/sdk/gateways/{apiKey}/interactions.json"
-eventUpdateResolver.analyticsPath = "/api/v2/sdk/gateways/{apiKey}/analytics.json"
-eventUpdateResolver.settingsPath = "/api/v2/sdk/gateways/{apiKey}/settings.json?platform=ios"
-eventUpdateResolver.pingPath = "/api/v2/sdk/gateways/{apiKey}/active.json"
-Tolo.sharedInstance().publish(eventUpdateResolver)
-```
 
 Copy & paste the above code in your app exactly as it is (do not replace the `apiKey` string with your API key - the SDK will do that automatically when you set it up.   
 

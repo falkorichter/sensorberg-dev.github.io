@@ -119,7 +119,11 @@ If you want to receive events while the app is innactive, you need to pass `YES`
 {% highlight swift %}
 SBManager.sharedManager().requestLocationAuthorization(true)
 {% endhighlight %}
-> **Important**: Be sure to add the `NSLocationAlwaysUsageDescription` (or `NSLocationWhenInUseUsageDescription`) key to your plist file and the corresponding string to explain to the user why the app requires access to location.
+
+<div class="callout callout-alert">
+<h1><i class="fa fa-exclamation-triangle"></i>Important</h1>
+Be sure to add the `NSLocationAlwaysUsageDescription` (or `NSLocationWhenInUseUsageDescription`) key to your plist file and the corresponding string to explain to the user why the app requires access to location.
+</div>
 
 Keep in mind that the SDK also requires the Bluetooth radio to be turned ON. You can check the status of the radio by calling:  
 
@@ -309,3 +313,9 @@ If you encounter any bugs, please [report them](https://github.com/sensorberg-de
     <h1><i class='fa fa-info-circle'></i>Dependency collisions?</h1>
     <p>If you have a dependency collision or you don´t want to integrate the sources of our SDK into your project, <a href="mailto:support@sensorbergcom">contact us</a>. We have <a href="https://github.com/sensorberg-dev/ios-sdk/tree/v2m">a script</a> which generates a "mangled" library, with obfuscated symbols.<strong>We only recommend to use it in very rare cases!</strong></p>
 </div>
+
+</br>
+</br>
+</br>
+</br>
+

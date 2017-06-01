@@ -18,6 +18,7 @@ Starting with v2.5, the Sensorberg SDK uses a different API end-point.
 If you're using v2.4.1 of our SDK, you will need to manually inform the SDK the address of the new end-point:  
 
 <strong>Objective-C</strong>
+
 {% highlight obj-c %}
 PUBLISH(({  
 SBEventUpdateResolver *updateEvent = [SBEventUpdateResolver new];  

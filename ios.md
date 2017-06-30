@@ -87,7 +87,7 @@ open <YourProjectName>.xcworkspace
 Import the SensorbergSDK  
 
 *ObjC :*  
-{% highlight obj-c %}
+{% highlight objc %}
 # import <SensorbergSDK/SensorbergSDK.h>
 {% endhighlight %}  
 
@@ -101,7 +101,7 @@ The Sensorberg SDK uses an [event bus](https://en.wikipedia.org/wiki/Publish%E2%
 During setup, you pass the class instance that will receive the events as the `delegate`.*  
 
 *ObjC :*  
-{% highlight obj-c %}
+{% highlight objc %}
 [[SBManager sharedManager] setApiKey:kAPIKey delegate:self];
 {% endhighlight %}
 *Swift :*  
@@ -112,7 +112,7 @@ Before starting the scanner, we need to ask permission to use the Location servi
 If you want to receive events while the app is innactive, you need to pass `YES` to the `requestLocationAuthorization`. If you pass `NO`, the app will receive events only when active.  
 
 *ObjC :*
-{% highlight obj-c %}
+{% highlight objc %}
 [SBManager sharedManager] requestLocationAuthorization:YES];
 {% endhighlight %}
 *Swift :*
@@ -128,7 +128,7 @@ Be sure to add the `NSLocationAlwaysUsageDescription` (or `NSLocationWhenInUseUs
 Keep in mind that the SDK also requires the Bluetooth radio to be turned ON. You can check the status of the radio by calling:  
 
 *ObjC :*
-{% highlight obj-c %}
+{% highlight objc %}
 [[SBManager sharedManager] bluetoothAuthorization] //returns SBBluetoothStatus
  {% endhighlight %} 
 *Swift :*
@@ -138,7 +138,7 @@ SBManager.sharedManager().bluetoothAuthorization() //returns SBBluetoothStatus
     The SDK also includes convenience methods to request the user to turn the Bluetooth radio on:  
 
 *ObjC :*
-{% highlight obj-c %}
+{% highlight objc %}
 [[SBManager sharedManager] requestBluetoothAuthorization];
 {% endhighlight %}
 *Swift :*
@@ -148,7 +148,7 @@ SBManager.sharedManager().requestBluetoothAuthorization()
 To be informed when there's a change in the Bluetooth radio status, SUBSCRIBE to SBEventBluetoothAuthorization:
 
 *ObjC :*
-{% highlight obj-c %}
+{% highlight objc %}
 SUBSCRIBE(SBEventBluetoothAuthorization)
 {
     if (event.bluetoothAuthorization==SBBluetoothOn)
@@ -183,7 +183,7 @@ func onSBEventBluetoothAuthorization(event:SBEventBluetoothAuthorization)
 Once you setup the API key and the SDK starts monitoring, SUBSCRIBE to *SBEventPerformAction*:  
 
 *ObjC :*
-{% highlight obj-c %}
+{% highlight objc %}
 SUBSCRIBE(SBEventPerformAction)
 {
 	UILocalNotification *notification = [[UILocalNotification alloc] init];
@@ -230,7 +230,7 @@ Check out the [documentation](http://cocoadocs.org/docsets/SensorbergSDK/) for a
 To receive events in other class instances besides the **delegate**, the listener object  has to be registered on Event Bus like following example.  
 
 *ObjC :*
-{% highlight obj-c %}
+{% highlight objc %}
 - (instancetype)init
 {
     if (self = [super init])

@@ -45,7 +45,7 @@ The following 3 language objects ("de", "en", "ko") are localised strings for no
 
 Ex : custom payload
 
-```javascript
+{% highlight javascript %}
 {
   "onEnter": {
     "confirmAction": "open",
@@ -70,7 +70,7 @@ Ex : custom payload
     }
   }
 }
-```
+{% endhighlight %}
 
 
 **Get content of payload from SBCampaignAction**
@@ -90,35 +90,34 @@ Get the "onEnter" content from the payload
 Register UserNotificationSettings.
 
 
-{% highlight objective-c %}
+{% highlight objc %}
+NSDictionary *localizedDict = [actionDict objectForKey:@"en"];
+UIMutableUserNotificationAction *okAction = [UIMutableUserNotificationAction new];
+okAction.identifier = @"okActionIdentifier";
+okAction.title = [localizedDict objectForKey:@"okButtonTitle"];
+okAction.authenticationRequired = NO;
+okAction.activationMode = [[actionDict objectForKey:@"actInForeground"] boolValue] ?UIUserNotificationActivationModeForeground : UIUserNotificationActivationModeBackground;
 
-    NSDictionary *localizedDict = [actionDict objectForKey:@"en"];
-    UIMutableUserNotificationAction *okAction = [UIMutableUserNotificationAction new];
-    okAction.identifier = @"okActionIdentifier";
-    okAction.title = [localizedDict objectForKey:@"okButtonTitle"];
-    okAction.authenticationRequired = NO;
-    okAction.activationMode = [[actionDict objectForKey:@"actInForeground"] boolValue] ?UIUserNotificationActivationModeForeground : UIUserNotificationActivationModeBackground;
+UIMutableUserNotificationAction *cancelAction = [UIMutableUserNotificationAction new];
+cancelAction.identifier = @"cancelButtonIdentifer";
+cancelAction.title = [localizedDict objectForKey:@"cancelButtonTitle"];
+cancelAction.authenticationRequired = NO;
+// cancel action should not activate app.
+cancelAction.activationMode = UIUserNotificationActivationModeBackground;
+UIMutableUserNotificationCategory *actionCategory;
+actionCategory = [[UIMutableUserNotificationCategory alloc] init];
+[actionCategory setIdentifier:@"myOnEnterActionCategoryIdeintifier"];
+[actionCategory setActions:@[okAction, cancelAction] forContext:UIUserNotificationActionContextDefault];
 
-    UIMutableUserNotificationAction *cancelAction = [UIMutableUserNotificationAction new];
-    cancelAction.identifier = @"cancelButtonIdentifer";
-    cancelAction.title = [localizedDict objectForKey:@"cancelButtonTitle"];
-    cancelAction.authenticationRequired = NO;
-    // cancel action should not activate app.
-    cancelAction.activationMode = UIUserNotificationActivationModeBackground;
-    UIMutableUserNotificationCategory *actionCategory;
-    actionCategory = [[UIMutableUserNotificationCategory alloc] init];
-    [actionCategory setIdentifier:@"myOnEnterActionCategoryIdeintifier"];
-    [actionCategory setActions:@[okAction, cancelAction] forContext:UIUserNotificationActionContextDefault];
+NSSet *categories = [NSSet setWithObject:actionCategory];
+UIUserNotificationType types = (UIUserNotificationTypeAlert|
+                                UIUserNotificationTypeSound|
+                                UIUserNotificationTypeBadge);
 
-    NSSet *categories = [NSSet setWithObject:actionCategory];
-    UIUserNotificationType types = (UIUserNotificationTypeAlert|
-                                    UIUserNotificationTypeSound|
-                                    UIUserNotificationTypeBadge);
+UIUserNotificationSettings *settings;
+settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
 
-    UIUserNotificationSettings *settings;
-    settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
-
-    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+[[UIApplication sharedApplication] registerUserNotificationSettings:settings];
 
 {% endhighlight %}
 
@@ -126,7 +125,7 @@ Register UserNotificationSettings.
 Create a local notification with a "notification category" and then schedule the  notification.
 
 
-{% highlight objective-c %}
+{% highlight objc %}
 
 UILocalNotification *n = [UILocalNotification new];
 n.alertTitle = [localizedDict objectForKey:@"title"];

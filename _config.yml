@@ -24,7 +24,7 @@ comments: true
 permalink: /:year/:month/:title/
 paginate: 3
 
-latestiOSRelease : "2.5"
+latestiOSRelease : "2.6"
 latestAndroidSDKRelease : "2.3.3-RAILS"
 
 excerpt_separator: <!--more-->

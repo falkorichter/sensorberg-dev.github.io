@@ -20,7 +20,7 @@ With this feature you can track the following informations:
 
 This "action" property is a unique id to report conversion information.
 
-{% highlight objective-c %}
+{% highlight objc %}
 
 @interface SBMCampaignAction : NSObject
 ...
@@ -34,7 +34,7 @@ When you receive an "SBEventPerformAction" event from the SDK, it will contain a
 Now you can use new 'action' parameter to report this conversion through 'SBManager'
 
 **Currently we have following 4 conversion types.**
-{% highlight objective-c %}
+{% highlight objc %}
 /**
  SBConversionType
  Represents the conversion type for a specific campaign action
@@ -65,36 +65,38 @@ typedef enum : NSUInteger {
 
 **Example for kSBConversionSuccessful :  When user has interacted with the notification**
 
-{% highlight objective-c %}
+{% highlight objc %}
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
-    if (notification.userInfo) {
+    if (notification.userInfo) 
+    {
         NSDictionary *dict = [notification.userInfo valueForKey:@"action"];
         SBMCampaignAction *action = [SBUtilities campaignActionFromDictionary:dict];
         if (action)
         {
-	        [[SBManager sharedManager] reportConversion:kSBConversionSuccessful forCampaignAction:[action.action copy]];
+            [[SBManager sharedManager] reportConversion:kSBConversionSuccessful forCampaignAction:[action.action copy]];
+        }
     }
-   }
 }
 
 {% endhighlight %}
 
 **Example for kSBConversionUnavailable : when the user cannot be notified.**
 
-{% highlight objective-c %}
+{% highlight objc %}
 
 SUBSCRIBE(SBEventPerformAction)
 {
-	if (![[SBManager sharedManager] canReceiveNotifications])
+    if (![[SBManager sharedManager] canReceiveNotifications])
     {
         [[SBManager sharedManager] reportConversion:kSBConversionUnavailable forCampaignAction:[action.action copy]];
     }
     else
     {
-	    // schedule notification
-   }
+        // schedule notification
+        [[SBManager sharedManager] reportConversion:kSBConversionIgnored forCampaignAction:[action.action copy]]
+    }
 }
 
 {% endhighlight %}
@@ -103,7 +105,7 @@ In this case you can also show an alert and let your customer decide whether to 
 
 Default Conversion value for campaign action is "**ignored**" (kSBConversionIgnored) - we overwrite conversion value when you report conversion through
 
-{% highlight objective-c %}
+{% highlight objc %}
 [[SBManager sharedManager] reportConversion:SBConversionType forCampaignAction:action];
 {% endhighlight %}
 

@@ -11,7 +11,7 @@ tags: contents beacon management platform
 Our marketing team has designed three quick tutorials to help you get onboard with our Beacons and Content Management Platform. You'll find everything to get started: registering your Beacons, linking your app - or the Sensorberg Showcase app - to your account, and designing a campaign. Those tutorials will also be on our Platform very soon.
 <br/>
 
-<a href="https://manage.sensorberg.com/#/signin"> Click here to sign in/up to our Platform! </a>
+<a href="https://portal.sensorberg.com/#/signin"> Click here to sign in/up to our Platform! </a>
 <br/>
 <br/>
 
@@ -52,6 +52,6 @@ Please don't hesitate to give us some Feedback on these tutorials!
 <br/> <br/>
 
 
- <a href="https://manage.sensorberg.com/#/signin"> to the Platform ! </a>
+ <a href="https://portal.sensorberg.com/#/signin"> to the Platform ! </a>
 
  <br/> <br/>

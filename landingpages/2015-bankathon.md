@@ -14,7 +14,7 @@ We´ve prepared this page to answer some of the questions you might have, any ot
 
 ## How to get an Account? 
 
-Go to <a href="https://manage.sensorberg.com/#/signup">manage.sensorberg.com/#/signup</a> and register for free now.
+Go to <a href="https://portal.sensorberg.com/#/signup">portal.sensorberg.com/#/signup</a> and register for free now.
 
 ## How Do I simulate beacons?
 

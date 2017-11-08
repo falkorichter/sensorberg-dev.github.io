@@ -35,4 +35,4 @@ We'll also release soon a tool to design building plans in order for you to visu
 <br/>
 We are eager for your Feedback!
 <br/><br/>
-<a href="https://manage.sensorberg.com/">  Click here to reach our Platform!</a>
+<a href="https://portal.sensorberg.com/">  Click here to reach our Platform!</a>

@@ -1,12 +1,25 @@
 ---
 layout: post
-title: "Conversion feature for Android SDK added in 2.2.0"
+title: "(Deprecated) Conversion feature for Android SDK added in 2.2.0"
 date: 2017-02-20
 comments: true
 tags: beacon Android tracking conversion SDK
 ---
 
-# Tracking User Actions with the Sensorberg Conversion Feature.
+<div class="callout callout-alert">
+    <h1><i class="fa fa-exclamation-triangle"></i>The post below is deprecated</h1>
+    <br/>
+    <h1>Starting on Android SDK 2.4 the API for conversion have been streamlined.</h1>
+    <br/>
+    <h2>The information below was only valid between Android SDK V2.2 and V2.4.</h2>
+    <br/>
+    <p>This page is only here for historical purposes.</p>
+    <br/>
+    <p>Check the <a href="/2017/11/Streamlined-conversion-feature-on-Android-SDK-2-4/">updated blogpost</a> for integration using the latest SDK</p>
+    <br/><br/><br/><br/>
+</div>
+
+## Tracking User Actions with the Sensorberg Conversion Feature.
 
 The "Conversion" feature enables you to measure user interactions with beacons and campaigns.
 With this feature you can track the following informations:
@@ -64,8 +77,11 @@ For this to happen call:
     As a result trying to e.g. mark Action that was "Success" as "Ignored" will have no effect.
  - You may skip "Ignored" stage if that is what you want and mark Action as "Success" straight away.
 
+ <div class="callout callout-alert">
+     <h1><i class="fa fa-exclamation-triangle"></i>ActionReceiver class have been deprecated and removed</h1>
+ </div>
 In case you need out-of-the-box solution that works with conversions and Notifications we've got you covered.
-Extend the abstract [ActionReceiver](https://github.com/sensorberg-dev/android-sdk/blob/master/android-sdk/src/main/java/com/sensorberg/ActionReceiver.java "ActionReceiver") class and supply your Notification in **onGetNotification**, plus implement
+Extend the abstract [ActionReceiver](https://github.com/sensorberg-dev/android-sdk/blob/v2.3.5-RAILS/android-sdk/src/main/java/com/sensorberg/ActionReceiver.java "ActionReceiver") class and supply your Notification in **onGetNotification**, plus implement
 **onAction** (or onVisitWebsiteAction / onInAppAction / onUriAction if you want to be more specific) callbacks,
 and the rest of conversion will happen automatically when user taps on it. Remember to put the ActionReceiver extended class in AndroidManifest.xml and use remote process for it.
 
@@ -82,6 +98,4 @@ and the rest of conversion will happen automatically when user taps on it. Remem
 </receiver>
 {% endhighlight %}
 
-[Corresponding blogpost about conversions for iOS](https://developer.sensorberg.com/2016/06/New-conversion-feature-in-iOS-SDK/ "Corresponding blogpost about conversions for iOS")
-
-Enjoy the Conversions!
+[Corresponding blogpost about conversions for iOS](/2016/06/New-conversion-feature-in-iOS-SDK/ "Corresponding blogpost about conversions for iOS")

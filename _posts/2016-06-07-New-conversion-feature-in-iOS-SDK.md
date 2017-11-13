@@ -69,7 +69,7 @@ typedef enum : NSUInteger {
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
-    if (notification.userInfo) 
+    if (notification.userInfo)
     {
         NSDictionary *dict = [notification.userInfo valueForKey:@"action"];
         SBMCampaignAction *action = [SBUtilities campaignActionFromDictionary:dict];
@@ -109,7 +109,7 @@ Default Conversion value for campaign action is "**ignored**" (kSBConversionIgno
 [[SBManager sharedManager] reportConversion:SBConversionType forCampaignAction:action];
 {% endhighlight %}
 
-[Corresponding blogpost about conversions for Android](https://developer.sensorberg.com/2017/02/Conversion-feature-for-Android-SDK/ "Corresponding blogpost about conversions for Android")
+[Corresponding blogpost about conversions for Android](/2017/11/Streamlined-conversion-feature-on-Android-SDK-2-4/ "Corresponding blogpost about conversions for Android")
 
 Enjoy the Conversions !!
 

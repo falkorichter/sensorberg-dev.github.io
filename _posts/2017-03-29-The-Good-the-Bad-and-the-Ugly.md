@@ -40,7 +40,7 @@ tags: beacon Android exit strategy timeout
 	"scanner.backgroundWaitTime": 120000,
 	"scanner.exitBackgroundGraceMillis": 7500
 }
-{% endhighlight %}</p>
+{% endhighlight %}
 <p>Translated to graph this is:</p>
 <img alt="Legend" src="/images/posts/2017-03-29-The-Good-the-Bad-and-the-Ugly/legend.png" width="100%"/>
 <p>Let's assume the beacon was last seen 3s after the first scan cycle started:</p>

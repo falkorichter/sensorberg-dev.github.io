@@ -41,6 +41,8 @@ static {
 <p>If you want to read up on the topic visit <a href="https://developer.android.com/about/versions/oreo/android-8.0-changes.html">developer.android.com/about/versions/oreo/android-8.0-changes.html</a><p>
 </div>
 
+
+
 # How to install the Sensorberg Android SDK
 
 You will need to have the jcenter artifactory in your list of repositories and declare the dependency to our <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/{{site.latestAndroidSDKRelease}}/">sdk</a>.

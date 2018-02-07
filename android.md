@@ -34,6 +34,13 @@ static {
 {% endhighlight %}
 </div>
 
+<div class="callout callout-alert">
+<h2>Targetting Android 8</h2>
+<p>The 2.x SDK is not compatible with apps targeting Android 8/Oreo/API level 26 as a tarket sdk</p>
+<p>If you require Android 8 to be your target SDK, please <a href="https://support.sensorberg.com">contact us</a></p>
+<p>If you want to read up on the topic visit <a href="https://developer.android.com/about/versions/oreo/android-8.0-changes.html">developer.android.com/about/versions/oreo/android-8.0-changes.html</a>
+</div>
+
 # How to install the Sensorberg Android SDK
 
 You will need to have the jcenter artifactory in your list of repositories and declare the dependency to our <a href="http://jcenter.bintray.com/com/sensorberg/sdk/android-sdk/{{site.latestAndroidSDKRelease}}/">sdk</a>.

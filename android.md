@@ -39,6 +39,7 @@ static {
 <p>The 2.x SDK is not compatible with apps targeting Android 8/Oreo/API level 26 as a tarket sdk</p>
 <p>If you require Android 8 to be your target SDK, please <a href="https://support.sensorberg.com">contact us</a></p>
 <p>If you want to read up on the topic visit <a href="https://developer.android.com/about/versions/oreo/android-8.0-changes.html">developer.android.com/about/versions/oreo/android-8.0-changes.html</a></p>
+<p>We do currently not see the need for our customers to target Android 8. If you have specific needs that require Android 8 APIs we would like to hear from you.</p>
 </div>
 
 

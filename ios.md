@@ -41,6 +41,30 @@ Tolo.sharedInstance().publish(eventUpdateResolver)
 {% endhighlight %}
 </div>
 
+<div class="callout callout-alert">
+<h1><i class="fa fa-exclamation-triangle"></i>Note about Swift 4.1 callbacks</h1>
+With Swith 4.1 you must declare your callbacks method `@objc public`!!!
+<strong>Swift</strong>
+{% highlight swift %}
+    @objc public func onSBEventLocationAuthorization(_ event:SBEventLocationAuthorization) {
+       SBManager.shared().startMonitoring()
+       print(event)
+    }
+    
+    @objc public func onSBEventPerformAction(_ event:SBEventPerformAction) {
+        print(event)
+    }
+    
+    @objc public func onSBEventRegionEnter(_ event:SBEventRegionEnter) {
+        print(event)    
+    }
+    
+    @objc public func onSBEventRegionExit(_ event:SBEventRegionExit) {
+        print(event)
+    }
+{% endhighlight %}
+</div>
+
 # Getting started with the Sensorberg SDK
 
 *This is a guide to help developers get up to speed with Sensorberg iOS SDK. These step-by-step instructions are written for Xcode 7, using the iOS 8 SDK. If you are using a previous version of Xcode, you may want to update before starting.*  
@@ -165,7 +189,7 @@ SUBSCRIBE(SBEventBluetoothAuthorization)
 {% endhighlight %}
 *Swift :*
 {% highlight swift %}
-func onSBEventBluetoothAuthorization(event:SBEventBluetoothAuthorization)
+@objc public func onSBEventBluetoothAuthorization(event:SBEventBluetoothAuthorization)
 {
     if (event.bluetoothAuthorization == SBBluetoothOn)
     {
@@ -206,7 +230,7 @@ SUBSCRIBE(SBEventPerformAction)
 {% endhighlight %}  
 *Swift :*
 {% highlight swift %}
-func onSBEventPerformAction(event:SBEventPerformAction)
+@objc public func onSBEventPerformAction(event:SBEventPerformAction)
 {
     let notification = UILocalNotification()
     notification.alertTitle = event.campaign.subject

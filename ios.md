@@ -43,7 +43,7 @@ Tolo.sharedInstance().publish(eventUpdateResolver)
 
 <div class="callout callout-alert">
 <h1><i class="fa fa-exclamation-triangle"></i>Note about Swift 4.1 callbacks</h1>
-With Swith 4.1 you must declare your callbacks method `@objc public`!!!
+With Swith 4.1 you must declare your callbacks method ```@objc public```!!!
 <strong>Swift</strong>
 {% highlight swift %}
     @objc public func onSBEventLocationAuthorization(_ event:SBEventLocationAuthorization) {

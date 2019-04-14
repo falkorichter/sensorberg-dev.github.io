@@ -1,0 +1,128 @@
+<script type="text/javascript">
+    //<!--
+    var current_tab = 1;
+    function display(tab_id)
+    {
+        document.getElementById('tab_'+current_tab).className = 'tab';
+        document.getElementById('tab_'+tab_id).className = 'active tab';
+        document.getElementById('content_'+current_tab).style.display = 'none';
+        document.getElementById('content_'+tab_id).style.display = 'block';
+        current_tab = tab_id;
+    }
+    //-->
+</script>
+
+<style type="text/css">
+
+    .nav-tabs {
+        border-bottom:0px;
+    }
+
+    .tab
+    {
+        display:inline-block;
+        margin:10px 10px 0 0px;
+        padding:12px 30px ;
+        border:1px solid #CFCFCF;
+        border-bottom:none;
+        border-radius:3px 3px 0 0;
+        color:#555;
+        cursor: pointer;
+        font-weight:bold;
+    }
+    .active
+    {
+        border:0px solid #AAA;
+
+        background:#f5f5f5;
+    }
+    .active:hover
+    {
+        background:#AAA;
+    }
+    .container-content {
+        max-width: 940px;
+        min-width: 320px;
+        margin: 0px auto;
+    }
+    .content
+    {
+        background-color:#f5f5f5;
+        margin-top:0px;
+        padding:0px 20px;
+        padding-bottom:50px;
+        display:none;
+        border:0px solid #AAA;
+        border-radius:0px;
+        color:#555;
+    }
+    .content-init
+    {
+        overflow: hidden;
+        background-color:#f5f5f5;
+        margin-top:0px;
+        padding:0px 20px;
+        padding-bottom:50px;
+        border:0px solid #AAA;
+        border-radius:0px;
+        color:#555;
+    }
+
+    .feature-block3 {
+        padding: 20px 0px;
+        text-align: center;
+    }
+
+    .thumbnail-width {
+        height: 190px;
+        padding: 20px 0;
+    }
+    .thumbnail-width>a>img{
+        border: 3px solid #f5f5f5;
+    }
+    .thumbnail-width>a>img:hover{
+        border: 3px solid rgba(125, 162, 177, 1);
+    }
+
+    .video-thumb{
+        width: 100%;
+    }
+    .video-title{
+        width: 260px;
+        margin: 10px auto 0 auto;
+    }
+    .video-title a {
+        color: #49697d;
+        font-size: 18px;
+    }
+    .video-title a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="container-content">
+
+    <ul class="nav nav-tabs">
+        <!--<li class="active tab"  id="tab_1" onclick="javascript:display('1');">Getting started</li>-->
+        <!--<li class="tab"         id="tab_2" onclick="javascript:display('2');">Sensorberg's Cloud Services</li>-->
+        <!--<li class="tab"         id="tab_3" onclick="javascript:display('3');">Developer's tipps</li>-->
+    </ul>
+
+    <div class="content-init" id="content_1">
+        {%for video in site.videos-iframe %}
+        {% if video.category == "gettingStarted" %}
+
+        <div class="col-xs-4">
+            <div class="feature-block3">
+                <div class="thumbnail-width">
+                    <a href="{{ video.url }}"><img src="{{ video.previewImage }}" alt="{{ video.title }}" class="video-thumb"></a>
+                    <div class="video-title">
+                        <a href="{{ video.url }}">{{ video.title }}</a>, <i>{{ video.length }}</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

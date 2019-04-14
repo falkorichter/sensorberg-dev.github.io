@@ -1,16 +1,7 @@
 language: ruby
-rvm:
-- 2.1
-
-before_install:
-- travis_retry gem install html-proofer
-- travis_retry gem install jekyll
-
-script: jekyll build && htmlproof ./_site  --file-ignore ""/.+\/ios\/cocoadocs.+/""
-
+script: bundle exec rake
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
 notifications:
    slack: sensorberg:bYfkpm6TExFzF5gdpQz2IHDh

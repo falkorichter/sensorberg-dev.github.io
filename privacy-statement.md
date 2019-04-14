@@ -5,7 +5,7 @@ permalink: /privacy-statement/
 ---
 
 
-#Privacy statement
+# Privacy statement
 
 Betreiber der Website unter der Domain [sensorberg.com](http://sensorberg.com) ist die Sensorberg GmbH, Köpenicker Str. 154, 10997, Berlin (nachfolgend „Wir“). Wir sind die verantwortliche Stelle im Sinne des Bundesdatenschutzgesetzes (nachfolgend „BDSG“) für die Erhebung, Verarbeitung und Nutzung von personenbezogenen Daten der Nutzer unserer Website (nachfolgend „Sie“).
 
@@ -83,6 +83,8 @@ Generell können Sie das Speichern von Cookies verhindern, indem Sie in Ihren Br
 
 3.2 Wenn Sie mit der zuvor beschriebenen Speicherung und Verwendung der Nutzungsdaten nicht einverstanden sind, können Sie die Webanalyse durch Anklicken der der nachfolgenden Widerspruchserklärung zugeordneten Checkbox deaktivieren und auf diesem Weg Ihren Widerspruch gegen die bei dieser Webanalyse-Maßnahmen stattfindende Datenerhebung und -verwendung erklären.
 
+<iframe style="border: 0; height: 200px; width: 600px;" src="https://stats.sensorberg.com/index.php?module=CoreAdminHome&action=optOut&language=en"></iframe>
+
 3.3 Der Widerspruch ist nicht möglich, wenn Sie die Verwendung von Cookies in Ihrem Internetbrowser generell deaktiviert haben. Sie müssen daher in Ihren Browsereinstellungen jedenfalls eine Ausnahme für den Piwik-Opt-out-Cookie zulassen, damit wir Ihren Widerspruch technisch umsetzen können. Ihr Widerspruch bleibt solange registriert, solange der Opt-out-Cookie nicht gelöscht wird. Bitte beachten Sie in diesem Zusammenhang, dass der Cookie natürlich entfernt wird, wenn Sie unterschiedslos alle Cookies in Ihrem Browser löschen. Wenn Sie den Cookie gelöscht haben, müssen Sie es erneut setzen. Falls Sie sensorberg.com von verschiedenen Rechnern aus oder mit unterschiedlichen Browsern aufrufen, müssen Sie die Cookies jeweils gesondert für jeden Rechner bzw. jeden verwendeten Browser hinzufügen.
 
 3.4 Durch den Einsatz dieses Verfahrens erhalten wir keine personenbezogenen Daten über Sie, sondern vielmehr allein statistische Informationen über die Nutzung unserer Website. Wir erfahren auf diesem Weg zum Beispiel, welche Inhalte auf unserer Website besonders beliebt sind, zu welchen Zeiten unsere Website besonders intensiv genutzt wird, über welche Seiten unsere Nutzer zu unserer Website gelangen, von wo der Nutzer sich in das Internet eingewählt hat, bevor er unsere Website besucht, und welche Browser und Betriebssysteme unsere Nutzer im allgemeinen nutzen, wenn sie auf unserer Website surfen. Diese Informationen nutzen wir, um unsere Website laufend technisch, gestalterisch und redaktionell zu verbessern und für Sie komfortabler zu machen. Anhand der statistischen Erkenntnisse zu Browsertyp und Betriebssystem können wir zudem unser Webdesign optimieren.
@@ -91,7 +93,7 @@ Generell können Sie das Speichern von Cookies verhindern, indem Sie in Ihren Br
 
 1. Auf dieser Website nutzen wir für Feedback unserer Nutzer und Kunden ein System der Zendesk, Inc., 989 Market Street #300, San Francisco, CA 94102, USA (nachfolgend “Zendesk“). Die Nutzung des Systems ist optional und dient der Verbesserung und Beschleunigung unseres Kundenservice. Zur Verwendung des Systems ist mindestens die Angabe einer korrekten E-Mail-Adresse und eines Namens notwendig. Im Verlauf der Bearbeitung von Service-Anfragen, kann es notwendig sein, dass (z.B. zur Zusendung von Dokumenten oder Ersatzteilen) weitere Daten erhoben werden (v.a. Ihre Anschrift).
 
-2. Zendesk ist dem Datenschutzabkommen Safe Harbor zwischen den Vereinigten Staaten von Amerika und der Europäischen Union beigetreten und kann eine entsprechende Selbstzertifizierung vorweisen und erfüllt somit die Mindestvoraussetzungen für eine gesetzeskonforme Verarbeitung von Daten. Weitere Informationen zur Verwendung und Nutzung personenbezogener Daten durch Zendesk erhalten Sie in der Datenschutzerklärung von Zendesk, abrufbar unter[https://www.zendesk.de/datenschutzrichtlinie](https://www.zendesk.de/datenschutzrichtlinie).
+2. Zendesk ist dem Datenschutzabkommen Safe Harbor zwischen den Vereinigten Staaten von Amerika und der Europäischen Union beigetreten und kann eine entsprechende Selbstzertifizierung vorweisen und erfüllt somit die Mindestvoraussetzungen für eine gesetzeskonforme Verarbeitung von Daten. Weitere Informationen zur Verwendung und Nutzung personenbezogener Daten durch Zendesk erhalten Sie in der Datenschutzerklärung von Zendesk, abrufbar unter[https://www.zendesk.de/company/privacy/](https://www.zendesk.de/company/privacy/).
 
 #### V. Social Media-Plugins
 

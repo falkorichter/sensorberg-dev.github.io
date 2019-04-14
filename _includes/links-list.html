@@ -1,6 +1,11 @@
-<h1>Links</h1>
+ {% if page.title != blog %}
+ <h1>General links</h1>
+ {% endif %}
+ {% if page.title == blog %}
+  <h1>Links</h1>
+  {% endif %}
 <ul>
-  <li><a href="https://github.com/sensorberg-dev/android-sdk">Android SDK</a></li>
-  <li><a href="https://github.com/sensorberg-dev/ios-sdk">iOS SDK</a></li>
-  <li><a href="https://github.com/sensorberg-dev/resolver">Sensorberg Resolver</a></li>
+  <li><a href="/">Home</a></li>
+  <li><a href="/android/">Android SDK</a></li>
+  <li><a href="/ios/">iOS SDK</a></li>  
 </ul>

@@ -1,0 +1,30 @@
+---
+layout: null
+permalink: /frontend-releases.html
+
+---
+{% include header.html %}
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            <div class="sidebar well">
+                {{ site.description }}
+            </div>
+            {% include sidebar.html %}
+        </div>
+        <div class="col-md-9">
+            <div class="article">
+                <h1>Frontent Releases</h1>
+                {%for release in site.frontend-releases reversed %}
+                <div class="well">
+                    <h1>{{ release.date | date: " %b %-d. %Y" }} - {{ release.version }} {% if release.title %}"{{release.title}}"{% endif %}</h1>
+                    <div class="post-content">
+                        {{ release.content }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% include footer.html %}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/js/theme.js"></script>
+    <link rel="icon" href="/images/favicon4.png" type="image/png">
+    <link rel="alternate" type="text/xml" title="RSS .92" href="{{ site.baseurl }}/feed.xml">
+    <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,800,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+<style type="text/css">
+
+    .contents-block {
+        text-align: justify;
+        padding-bottom: 10px;
+    }
+
+    .content
+    {
+        background-color:#f5f5f5;
+        margin-top:0px;
+        padding:0px 20px;
+        padding-bottom:50px;
+        display:none;
+        border:0px solid #AAA;
+        border-radius:0px;
+        color:#555;
+    }
+
+    .content-init
+    {
+        background-color:#f5f5f5;
+        margin-top:0px;
+        padding:0px 20px;
+        padding-bottom:50px;
+        border:0px solid #AAA;
+        border-radius:0px;
+        color:#555;
+        overflow: hidden;
+    }
+
+    .container_video
+    {
+        background-color:#f5f5f5;
+        padding: 10px 20px 20px 20px;
+    }
+
+    .container_video h2 {
+        font-size: 1.8em;
+        text-align: justify;
+    }
+
+    .container3 {
+        max-width: 940px;
+        min-width: 320px;
+        margin: 0px auto;
+        border-radius:6px;
+    }
+
+    .video-iframe {
+        margin-bottom: 20px;
+    }
+
+    .video-description {
+        position: relative;
+        height:405px;
+        padding-left:20px;
+    }
+
+    .see-also-video {
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        bottom: 0;
+    }
+
+    .see-also-video a {
+        text-align: center;
+    }
+
+    .see-also-video img {
+        width: 275px;
+        height: 165px;
+        margin: 10px 0;
+    }
+
+    .back-link {
+        font-weight:bold;
+        cursor: pointer;
+    }
+
+    .headline-tutorials {
+        font-size: 32px;
+        font-weight: 400;
+    }
+    </style>
+<div class="container3 container_video">
+    <div class="row">
+        <div class="col-xs-8">
+            <a href="/tutorials-iframe/"><span class="back-link"><i class="fa fa-chevron-left"></i><!--<i class="fa fa-long-arrow-left"></i>--> Back to the tutorials' overview</span></a>
+            <h2>{{page.title}}</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-8">
+            <iframe class="video-iframe" width="604" height="370" src="{{page.video_url}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="col-xs-4 video-description">
+
+            <div class="contents-block">
+                <b>Description</b>
+                <p>{{page.description}}</p>
+            </div>
+
+            {% if (page.see_also_image_path && page.see_also_link page.see_also_text) %}
+            <div class="see-also-video">
+                <p><b>See also</b></p>
+                <a href="{{page.see_also_link}}"><img src="{{page.see_also_image_path}}" alt="{{page.see_also_text}}" /></a>
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+
+{% include analytics.html %}
+
+<script type="text/javascript">
+    setTimeout(function(){var a=document.createElement("script");
+        var b=document.getElementsByTagName("script")[0];
+        a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0035/6332.js?"+Math.floor(new Date().getTime()/3600000);
+        a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+</body>
+</html>
+

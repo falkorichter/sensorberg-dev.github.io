@@ -1,10 +1,10 @@
 # Jekyll configuration
 
 name: Sensorberg Developer Hub
-description: Develop your own Beacon-based solutions within minutes.
+description: Your toolbox to develop your own Beacon-based solution!
 
 # url is currently only used only for the RSS feed in feed.xml
-url: http://developer.sensorberg.com
+url: https://developer.sensorberg.com
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
@@ -21,15 +21,31 @@ github: 'sensorberg-dev'
 disqus: 'sensorberg-dev'
 comments: true
 
-permalink: /:year/:month/:title
+permalink: /:year/:month/:title/
 paginate: 3
 
-latestiOSRelease : "0.7.9"
-latestAndroidRelease : "0.9.3"
+latestiOSRelease : "2.6"
+latestAndroidSDKRelease : "2.4"
 
-highlighter: pygments
-markdown: redcarpet
+excerpt_separator: <!--more-->
+highlighter: rouge
+# markdown: kramdown
+# kramdown:
+#   input: GFM
+gems: [jekyll-paginate, html-proofer]
+markdown: kramdown
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
-exclude: ['README.md', 'LICENSE']
+exclude: ['README.md', 'LICENSE', 'Rakefile', 'Gemfile', 'Gemfile.lock']
+
+collections:
+  frontend-releases:
+    output: false
+    permalink: /frontend-releases/:path/
+  videos:
+    output: true
+    permalink: /videos/:path/
+  videos-iframe:
+    output: true
+    permalink: /videos-iframe/:path/

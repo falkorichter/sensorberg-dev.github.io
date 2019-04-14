@@ -1,0 +1,36 @@
+---
+layout: null
+permalink: /blog/
+---
+
+{% include header.html %}
+
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            <div class="sidebar well">
+
+                    {{ site.description }}
+             </div>
+            {% include sidebar.html %}
+        </div>
+        <div class="col-md-9">
+            <div class="article">
+                {%for post in site.posts %}
+                    <div class="well">
+                        <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d" }} - {{ post.title }}</a></h1>
+                        <div class="post-content">
+                            {{ post.excerpt }}
+                        </div>
+                        <div style="text-align:right;">
+                            <a href="{{ site.baseurl}}{{ post.url }}">Read more »</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include disqus-comments.html %}
+{% include footer.html %}

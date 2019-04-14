@@ -1,0 +1,131 @@
+{% include header.html %}
+
+<style type="text/css">
+
+.contents-block {
+    text-align: justify;
+    padding-bottom: 30px;
+}
+
+.content
+{
+  background-color:#f5f5f5;
+  margin-top:0px;
+  padding:0px 20px;
+  padding-bottom:50px;
+  display:none;
+  border:0px solid #AAA;
+  border-radius:0px;
+  color:#555;
+}
+
+.content-init
+{
+background-color:#f5f5f5;
+margin-top:0px;
+padding:0px 20px;
+padding-bottom:50px;
+border:0px solid #AAA;
+border-radius:0px;
+color:#555;
+overflow: hidden;
+}
+
+.container_video
+{
+background-color:#f5f5f5;
+padding: 10px 20px 20px 20px;
+}
+
+.container_video h2 {
+  font-size: 1.8em;
+  text-align: justify;
+}
+
+.container3 {
+  max-width: 940px;
+  min-width: 320px;
+  margin: 5px auto;
+  margin-top: 0px ;
+  margin-bottom: 30px ;
+  border-radius:6px;
+}
+
+.video-iframe {
+  margin-bottom: 20px;
+}
+
+.video-description {
+  position: relative;
+  height:405px;
+  padding-left:20px;
+}
+
+.see-also-video {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  bottom: 0;
+}
+
+.see-also-video a {
+  text-align: center;
+}
+
+.see-also-video img {
+  width: 275px;
+  height: 165px;
+  margin: 10px 0;
+}
+
+.back-link {
+  font-weight:bold;
+  cursor: pointer;
+}
+
+.tutorials-headline {
+    font-size: 32px;
+    font-weight: 400;
+    padding: 0 30px 20px 30px;
+}
+
+</style>
+
+<div style="margin-top: 80px">
+  <div class="container2">
+    <h1 class="tutorials-headline">Sensorberg tutorials</h1>
+  </div>
+</div>
+
+
+<div class="container3 container_video">
+  <div class="row">
+    <div class="col-md-8">
+      <a href="/tutorials"><span class="back-link"><i class="fa fa-chevron-left"></i><!--<i class="fa fa-long-arrow-left"></i>--> Back to the tutorials' overview</span></a>
+      <h2> {{page.title}}</h2>
+    </div>
+  </div>01-How-to-configure-your-beacon/index.html
+
+  <div class="row">
+    <div class="col-md-8">
+      <iframe class="video-iframe" width="604" height="370" src="{{page.video_url}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="col-md-4 video-description">
+      <div class="contents-block">
+        <p><b>Description</b></p>
+        {{page.description}}
+      </div>
+
+      {% if (page.see_also_image_path && page.see_also_link page.see_also_text) %}
+        <div class="see-also-video">
+            <p><b>See also</b></p>
+            <a href="{{page.see_also_link}}"><img src="{{page.see_also_image_path}}" alt="{{page.see_also_text}}"> </a>
+            <a href="{{page.see_also_link}}">{{page.see_also_text}}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}

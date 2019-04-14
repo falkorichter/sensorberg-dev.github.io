@@ -1,0 +1,187 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sensorberg API",
+		"_postman_id": "be39caa6-3226-f1d6-785e-c17a18050a1b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "beacons",
+			"request": {
+				"url": "{{api_base_url}}/api/internal/beacons",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token token={{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "geofences",
+			"request": {
+				"url": "{{api_base_url}}/api/internal/geofences",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token token={{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "trigger-groups",
+			"request": {
+				"url": "{{api_base_url}}/api/internal/trigger-groups",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token token={{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "gateways",
+			"request": {
+				"url": "{{api_base_url}}/api/internal/gateways",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token token={{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "gateways-groups",
+			"request": {
+				"url": "{{api_base_url}}/api/internal/gateway-groups",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token token={{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "interactions",
+			"request": {
+				"url": "{{api_base_url}}/api/internal/interactions",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token token={{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "scenarios",
+			"request": {
+				"url": "{{api_base_url}}/api/internal/scenarios",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token token={{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "event-reaction-log-entries",
+			"request": {
+				"url": "{{api_base_url}}/api/internal/event-reaction-log-entries",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token token={{auth_token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
